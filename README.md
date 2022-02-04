@@ -14,13 +14,13 @@ Ultimately, the objective is to develop a model that is able to predice the outc
 - The variable columns ```EIN``` and ```NAME``` were dropped from the dataframe as they did not provide data of analytic value. A final analysis (Attempt #4) also dropped the ```INCOME_AMT``` column, which was found to have little effect on the model results.
 
 **Compiling, Training, and Evaluating the Model**
-- The initial deep learning model was developed using two hidden layers, the first having 24 nodes, and the second having 18 nodes. The input data contained 43 features which led to 1,056 paramaters for the first layer and 450 for the second. The total count of parameters was 1,525. Both hidden laters utilized the ```relu``` activation function.<br>![Initial Parameters](Resources/initial_attempt_parameters.png)
-- The initial model was not able to achieve a target model performance of 75%, as shown below. The accuracy was 73.0% with a loss of 55.5%.<br>![Initial Results](Resources/initial_attempt_results.png)
+- The initial deep learning model was developed using two hidden layers, the first having 24 nodes, and the second having 18 nodes. The input data contained 43 features which led to 1,056 paramaters for the first layer and 450 for the second. The total count of parameters was 1,525. Both hidden laters utilized the ```relu``` activation function.<br>!<kbd>[Initial Parameters](Resources/initial_attempt_parameters.png)<kbd>
+- The initial model was not able to achieve a target model performance of 75%, as shown below. The accuracy was 73.0% with a loss of 55.5%.<br><kbd>![Initial Results](Resources/initial_attempt_results.png)<kbd>
 - To improve model accuracy, we optimized the model using the following methods:
-  - Adding an additional hidden layer, which had no change on the accuracy of 73.0%<br>![Attempt #1 Results](Resources/attempt1_results.png)
-  - Adding additional neurons, which had a very small change change on the accuracy, increasing to 73.1%<br>![Attempt #2 Results](Resources/attempt2_results.png)
-  - Changing the activation function of the second and third layers, which had a small negative change on the accuracy to 72.9%<br>![Attempt #3 Results](Resources/attempt3_results.png)
-  - Re-running the data cleaning to remove the ```INCOME_AMT``` column, which resulted in a small change to the model accuracy (all other parameters were identical to Attempt #1) to 73.1%.<br>![Attempt #4 Results](Resources/attempt4_results.png)
+  - Adding an additional hidden layer, which had no change on the accuracy of 73.0%<br><kbd>![Attempt #1 Results](Resources/attempt1_results.png)<kbd>
+  - Adding additional neurons, which had a very small change change on the accuracy, increasing to 73.1%<br><kbd>![Attempt #2 Results](Resources/attempt2_results.png)<kbd>
+  - Changing the activation function of the second and third layers, which had a small negative change on the accuracy to 72.9%<br><kbd>![Attempt #3 Results](Resources/attempt3_results.png)<kbd>
+  - Re-running the data cleaning to remove the ```INCOME_AMT``` column, which resulted in a small change to the model accuracy (all other parameters were identical to Attempt #1) to 73.1%.<br><kbd>![Attempt #4 Results](Resources/attempt4_results.png)<kbd>
 
 ## Summary/Conclusions
 In conclusion, running multiple deep learning neural network models resulted in all findings being approximately 73.0% accuracte to predict the outcome of a loan application. This is below our stated threshold of ≥75%. Future analyses should include other methods of supervised machine learning, including 
